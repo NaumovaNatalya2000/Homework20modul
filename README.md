@@ -1,18 +1,220 @@
-# Программа "Чатик"
+[Клиент-Сервер.drawio](https://github.com/user-attachments/files/22582299/-.drawio)# Программа "Чатик"
 ## Схема реализации TCP чата между двумя запущенными процессами программы на одном ПК
-[Клиент-Сервер.html](https://github.com/user-attachments/files/22582295/-.html)<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
-<!DOCTYPE html>
-<html>
-<head>
-<title>Клиент-Сервер.html</title>
-<meta charset="utf-8"/>
-</head>
-<body>
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\&quot; version=\&quot;28.2.5\&quot;&gt;&lt;diagram name=\&quot;Страница — 1\&quot; id=\&quot;NaA7vKiHDMzFMLcdtvyA\&quot;&gt;&lt;mxGraphModel dx=\&quot;1651\&quot; dy=\&quot;2001\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;1\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;827\&quot; pageHeight=\&quot;1169\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;&lt;root&gt;&lt;mxCell id=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-3\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-1\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-2\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-1\&quot; value=\&quot;&amp;lt;div&amp;gt;ШАГ 1.&amp;lt;/div&amp;gt;Создание сокета&amp;lt;div&amp;gt;socket()&amp;lt;/div&amp;gt;\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;350\&quot; y=\&quot;33\&quot; width=\&quot;126\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-7\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-2\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-5\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-10\&quot; value=\&quot;Да\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-7\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.3467\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-26\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-2\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-25\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-41\&quot; value=\&quot;Нет\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-26\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.391\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-2\&quot; value=\&quot;socket() успешно?\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;324\&quot; y=\&quot;123\&quot; width=\&quot;178\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-12\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-5\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-11\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-5\&quot; value=\&quot;ШАГ 2.&amp;lt;div&amp;gt;Заполняем структуру sockaddr_in&amp;lt;/div&amp;gt;\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;502\&quot; y=\&quot;203\&quot; width=\&quot;127\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-14\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-11\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-13\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-11\&quot; value=\&quot;ШАГ 3.&amp;lt;div&amp;gt;Попытка connect()&amp;lt;/div&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;rounded=0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;502\&quot; y=\&quot;303\&quot; width=\&quot;127\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-18\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-13\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-15\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-20\&quot; value=\&quot;Нет\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-18\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.3463\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-80\&quot; value=\&quot;Да\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-13\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-16\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-13\&quot; value=\&quot;connect() успешно?\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;476\&quot; y=\&quot;403\&quot; width=\&quot;178\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-40\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-15\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-39\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-15\&quot; value=\&quot;ШАГ 4.&amp;lt;div&amp;gt;Попытка bind()&amp;lt;/div&amp;gt;\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;352\&quot; y=\&quot;483\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-83\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-16\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-75\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-16\&quot; value=\&quot;Переходим в цикл чтения-отправки\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;824.5\&quot; y=\&quot;483\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-24\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-23\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-1\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-23\&quot; value=\&quot;Вход в функцию\&quot; style=\&quot;ellipse;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;349\&quot; y=\&quot;-47\&quot; width=\&quot;128\&quot; height=\&quot;47\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-25\&quot; value=\&quot;Выход из функции\&quot; style=\&quot;ellipse;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;196\&quot; y=\&quot;203\&quot; width=\&quot;128\&quot; height=\&quot;47\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-33\&quot; value=\&quot;Программа запущена на стороне сервера\&quot; style=\&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;244\&quot; y=\&quot;463\&quot; width=\&quot;80\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-34\&quot; value=\&quot;\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;direction=west;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;302\&quot; y=\&quot;463\&quot; width=\&quot;50\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-35\&quot; value=\&quot;\&quot; style=\&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;direction=east;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;949.5\&quot; y=\&quot;463\&quot; width=\&quot;50\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-36\&quot; value=\&quot;Программа запущена на стороне клиента\&quot; style=\&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;980\&quot; y=\&quot;463\&quot; width=\&quot;80\&quot; height=\&quot;100\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-44\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-39\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-42\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-46\&quot; value=\&quot;Нет\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-44\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.4103\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-45\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-39\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-43\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-47\&quot; value=\&quot;Да\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-45\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.4455\&quot; y=\&quot;2\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-39\&quot; value=\&quot;bind() успешно?\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;325.5\&quot; y=\&quot;585\&quot; width=\&quot;178\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-42\&quot; value=\&quot;Выход из функции\&quot; style=\&quot;ellipse;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;197.5\&quot; y=\&quot;665\&quot; width=\&quot;128\&quot; height=\&quot;47\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-49\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-43\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-48\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-43\&quot; value=\&quot;ШАГ 5.&amp;lt;div&amp;gt;Попытка listen()&amp;lt;/div&amp;gt;\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;502\&quot; y=\&quot;665\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-52\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-48\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-50\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-55\&quot; value=\&quot;Нет\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-52\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.4263\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-53\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-48\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-51\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-54\&quot; value=\&quot;Да\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-53\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.4401\&quot; y=\&quot;-1\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-48\&quot; value=\&quot;listen() успешно?\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;475.5\&quot; y=\&quot;760\&quot; width=\&quot;178\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-50\&quot; value=\&quot;Выход из функции\&quot; style=\&quot;ellipse;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;347.5\&quot; y=\&quot;840\&quot; width=\&quot;128\&quot; height=\&quot;47\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-57\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-51\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-56\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-51\&quot; value=\&quot;ШАГ 6.&amp;lt;div&amp;gt;Попытка accept()&amp;lt;/div&amp;gt;\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;654\&quot; y=\&quot;840\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-60\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-56\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-58\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-61\&quot; value=\&quot;Нет\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-60\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.5024\&quot; y=\&quot;-1\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-64\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-56\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-63\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-84\&quot; value=\&quot;Да\&quot; style=\&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];\&quot; parent=\&quot;bNsLWlIrNEiIMY3Y1SiT-64\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot;&gt;&lt;mxGeometry x=\&quot;-0.3414\&quot; y=\&quot;2\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxPoint as=\&quot;offset\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-56\&quot; value=\&quot;accept() успешно?\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;627.5\&quot; y=\&quot;930\&quot; width=\&quot;178\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-58\&quot; value=\&quot;Выход из функции\&quot; style=\&quot;ellipse;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;499\&quot; y=\&quot;1010\&quot; width=\&quot;128\&quot; height=\&quot;47\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-68\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-63\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-67\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-72\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-63\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-71\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-63\&quot; value=\&quot;Чтение-отправка сообщений\&quot; style=\&quot;shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;810\&quot; y=\&quot;1010\&quot; width=\&quot;120\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-66\&quot; value=\&quot;read\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;807.5\&quot; y=\&quot;1120\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-70\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-67\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-63\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-67\&quot; value=\&quot;write\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;807.5\&quot; y=\&quot;1210\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-71\&quot; value=\&quot;Выход из функции\&quot; style=\&quot;ellipse;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;960\&quot; y=\&quot;1120\&quot; width=\&quot;128\&quot; height=\&quot;47\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-74\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-75\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-79\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-82\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-75\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-78\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-75\&quot; value=\&quot;Чтение-отправка сообщений\&quot; style=\&quot;shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;827\&quot; y=\&quot;585\&quot; width=\&quot;120\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-76\&quot; value=\&quot;read\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;824.5\&quot; y=\&quot;700\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-77\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;bNsLWlIrNEiIMY3Y1SiT-78\&quot; target=\&quot;bNsLWlIrNEiIMY3Y1SiT-75\&quot; edge=\&quot;1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-78\&quot; value=\&quot;write\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;824.5\&quot; y=\&quot;780\&quot; width=\&quot;125\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;bNsLWlIrNEiIMY3Y1SiT-79\&quot; value=\&quot;Выход из функции\&quot; style=\&quot;ellipse;whiteSpace=wrap;html=1;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry x=\&quot;990\&quot; y=\&quot;690\&quot; width=\&quot;128\&quot; height=\&quot;47\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;&lt;/diagram&gt;&lt;/mxfile&gt;&quot;,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;page&quot;:0}"></div>
-<script type="text/javascript" src="https://app.diagrams.net/js/viewer-static.min.js"></script>
-</body>
-</html>
-
+[Uploading Клиент-Сервер.drawi<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.3">
+  <diagram name="Страница — 1" id="NaA7vKiHDMzFMLcdtvyA">
+    <mxGraphModel dx="2752" dy="2556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-1" target="bNsLWlIrNEiIMY3Y1SiT-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-1" value="&lt;div&gt;ШАГ 1.&lt;/div&gt;Создание сокета&lt;div&gt;socket()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="33" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-2" target="bNsLWlIrNEiIMY3Y1SiT-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-10" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-7">
+          <mxGeometry x="-0.3467" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-2" target="bNsLWlIrNEiIMY3Y1SiT-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-41" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-26">
+          <mxGeometry x="-0.391" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-2" value="socket() успешно?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="324" y="123" width="178" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-5" target="bNsLWlIrNEiIMY3Y1SiT-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-5" value="ШАГ 2.&lt;div&gt;Заполняем структуру sockaddr_in&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="502" y="203" width="127" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-11" target="bNsLWlIrNEiIMY3Y1SiT-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-11" value="ШАГ 3.&lt;div&gt;Попытка connect()&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="502" y="303" width="127" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-13" target="bNsLWlIrNEiIMY3Y1SiT-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-20" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-18">
+          <mxGeometry x="-0.3463" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-80" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-13" target="bNsLWlIrNEiIMY3Y1SiT-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-13" value="connect() успешно?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="476" y="403" width="178" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-15" target="bNsLWlIrNEiIMY3Y1SiT-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-15" value="ШАГ 4.&lt;div&gt;Попытка bind()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="352" y="483" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-16" target="bNsLWlIrNEiIMY3Y1SiT-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-16" value="Переходим в цикл чтения-отправки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="824.5" y="483" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-23" target="bNsLWlIrNEiIMY3Y1SiT-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-23" value="Вход в функцию" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349" y="-47" width="128" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-25" value="Выход из функции" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="196" y="203" width="128" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-33" value="Программа запущена на стороне сервера" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="244" y="463" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-34" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="302" y="463" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-35" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;direction=east;" vertex="1" parent="1">
+          <mxGeometry x="949.5" y="463" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-36" value="Программа запущена на стороне клиента" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="980" y="463" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-39" target="bNsLWlIrNEiIMY3Y1SiT-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-46" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-44">
+          <mxGeometry x="-0.4103" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-39" target="bNsLWlIrNEiIMY3Y1SiT-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-47" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-45">
+          <mxGeometry x="-0.4455" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-39" value="bind() успешно?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325.5" y="585" width="178" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-42" value="Выход из функции" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="197.5" y="665" width="128" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-43" target="bNsLWlIrNEiIMY3Y1SiT-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-43" value="ШАГ 5.&lt;div&gt;Попытка listen()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="502" y="665" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-48" target="bNsLWlIrNEiIMY3Y1SiT-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-55" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-52">
+          <mxGeometry x="-0.4263" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-48" target="bNsLWlIrNEiIMY3Y1SiT-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-54" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-53">
+          <mxGeometry x="-0.4401" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-48" value="listen() успешно?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="475.5" y="760" width="178" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-50" value="Выход из функции" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="347.5" y="840" width="128" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-51" target="bNsLWlIrNEiIMY3Y1SiT-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-51" value="ШАГ 6.&lt;div&gt;Попытка accept()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="654" y="840" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-56" target="bNsLWlIrNEiIMY3Y1SiT-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-61" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-60">
+          <mxGeometry x="-0.5024" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-56" target="bNsLWlIrNEiIMY3Y1SiT-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-84" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bNsLWlIrNEiIMY3Y1SiT-64">
+          <mxGeometry x="-0.3414" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-56" value="accept() успешно?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="627.5" y="930" width="178" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-58" value="Выход из функции" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="499" y="1010" width="128" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-63" target="bNsLWlIrNEiIMY3Y1SiT-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-63" target="bNsLWlIrNEiIMY3Y1SiT-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-63" value="Чтение-отправка сообщений" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1010" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-66" value="read" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="807.5" y="1120" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-67" target="bNsLWlIrNEiIMY3Y1SiT-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-67" value="write" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="807.5" y="1210" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-71" value="Выход из функции" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1120" width="128" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-75" target="bNsLWlIrNEiIMY3Y1SiT-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-75" target="bNsLWlIrNEiIMY3Y1SiT-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-75" value="Чтение-отправка сообщений" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="827" y="585" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-76" value="read" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="824.5" y="700" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bNsLWlIrNEiIMY3Y1SiT-78" target="bNsLWlIrNEiIMY3Y1SiT-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-78" value="write" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="824.5" y="780" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bNsLWlIrNEiIMY3Y1SiT-79" value="Выход из функции" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="690" width="128" height="47" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+o…]()
 
 
 ## Класс User:
