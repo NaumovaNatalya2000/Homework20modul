@@ -1,5 +1,6 @@
-[Клиент-Сервер.drawio](https://github.com/user-attachments/files/22582299/-.drawio)# Программа "Чатик"
+# Программа "Чатик"
 ## Схема реализации TCP чата между двумя запущенными процессами программы на одном ПК
+[Клиент-Сервер.drawio](https://github.com/user-attachments/files/22582299/-.drawio)
 <img width="923" height="1346" alt="Клиент-Сервер" src="https://github.com/user-attachments/assets/15d8462b-8806-48e2-a3eb-0b5aee1d874e" />
 
 
